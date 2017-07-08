@@ -1,0 +1,31 @@
+#! /bin/sh
+
+# containers=$(POSTGRES_USER=react-starter POSTGRES_PASSWORD=secret-password docker-compose ps | grep socketwiz_ | wc -l | tr -d '')
+
+#if [ containers != 2 ]; then
+#    POSTGRES_USER=react-starter POSTGRES_PASSWORD=secret-password docker-compose up -d
+#fi
+
+tmux has-session -t socketwiz
+if [ $? != 0 ]
+then
+    tmux new-session -s socketwiz -n Server -d
+
+    # create another window
+    tmux new-window -t socketwiz:1 -n Zsh
+
+    # split the first window for server / test
+    tmux split-window -h -p 50 -t socketwiz:0.0
+
+    # run the server in the first pane, test in the second
+    tmux send-keys -t socketwiz:0.0 'cd ~/dev/socketwiz && npm run dev' C-m
+    #tmux send-keys -t socketwiz:0.1 'cd ~/dev/socketwiz && yarn run test:watch' C-m
+
+    # just get to the proper path in the last window
+    tmux send-keys -t socketwiz:1.0 'cd ~/dev/socketwiz' C-m
+
+    # select the server window and pane
+    tmux select-window -t socketwiz:0.0
+    tmux select-pane -t socketwiz:0.0
+fi
+tmux attach -t socketwiz
