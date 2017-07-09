@@ -7,23 +7,16 @@ import TwitterShare from '../components/twitter-share.js';
 export default class Article extends Component {
     render() {
         return <Main title="Using dtrace to fix git">
-            <TwitterShare />
             <h2 className="blog-post-title">Using dtrace to fix git</h2>
-            <p className="blog-post-meta">
-                <span className="glyphicon glyphicon-calendar"></span> 03 Aug 2014 <a href="https://twitter.com/share"
-                                                                                      className="twitter-share-button"
-                                                                                      data-via="socketwiz">Tweet</a>
-            </p>
+            <TwitterShare posted="03 Aug 2014"/>
 
-            <p>First off the problem.  I like to develop on <a href="http://smartos.org/">smartos</a>
-                because it is based on Solaris and has all of the conveniences of Linux with
+            <p>First off the problem.  I like to develop on <a href="http://smartos.org/">smartos</a> because
+                it is based on Solaris and has all of the conveniences of Linux with
                 a few extras namely zfs, zones and dtrace.  It’s dtrace that I’m going to
                 discuss today.  I run a very specialized version of vim.  By specialized I mean
-                I have a bunch of
-                <a href="https://github.com/socketwiz/dotfiles/tree/master/.vim/bundle">addons</a>.  In 
-                particular, <a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> and
-                <a href="https://github.com/SirVer/ultisnips">UltiSnips</a> requires that vim be a particular 
-                version and have python support compiled in.  The vim for smartos
+                I have a bunch of <a href="https://github.com/socketwiz/dotfiles/tree/master/.vim/bundle">addons</a>.  In 
+                particular, <a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> and <a href="https://github.com/SirVer/ultisnips">UltiSnips</a> requires
+                that vim be a particular version and have python support compiled in.  The vim for smartos
                 unfortunately does not so I build my own.  This leads us to my problem.  I also
                 use git and when I do commits I want it to use vim, specifically my custom vim,
                 otherwise it throws an error on startup complaining about the lack of python
@@ -37,7 +30,7 @@ Press ENTER or type command to continue`}</code></pre>
             <p>To fix this there are two options:</p>
 
             <ol>
-                <li>git config –global core.editor “/path/to/vim”</li>
+                <li>git config –global core.editor "/path/to/vim"</li>
                 <li>set the GIT_EDITOR, VISUAL, or EDITOR environment variables.</li>
             </ol>
 
@@ -106,8 +99,6 @@ CPU     ID                    FUNCTION:NAME
 
             <p>As well as the proper vim that I’m expecting.</p>
 
-
-            <div id="disqus_thread"></div>
             <Disqus />
         </Main>;
     }

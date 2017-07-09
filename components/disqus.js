@@ -14,8 +14,14 @@ export default class Disqus extends Component {
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         }
     }
+
+    componentDidMount() {
+        this.disqus();
+    }
     
     render() {
-        return <div>{this.disqus()}</div>;
+        return <div>
+            <div id="disqus_thread"></div>
+        </div>;
     }
 }

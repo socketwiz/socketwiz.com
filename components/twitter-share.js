@@ -1,5 +1,6 @@
 
 import {Component} from 'react';
+import PropTypes from 'prop-types';
 
 export default class TwitterShare extends Component {
     twitterShare(s, id) {
@@ -9,13 +10,29 @@ export default class TwitterShare extends Component {
             if(!document.getElementById(id)) {
                 js = document.createElement(s);
                 js.id = id;
-                js.src = p+'://platform.twitter.com/widgets.js';
+                js.src = p + '://platform.twitter.com/widgets.js';
                 fjs.parentNode.insertBefore(js, fjs);
             }
         }
     }
+
+    componentDidMount() {
+        this.twitterShare('script', 'twitter-wjs');
+    }
     
     render() {
-        return <div>{this.twitterShare('script', 'twitter-wjs')}</div>;
+        const {posted} = this.props;
+        
+        return <div>
+            <p className="blog-post-meta">
+                <span className="glyphicon glyphicon-calendar"></span> {posted} <a href="https://twitter.com/share"
+                                                                                   className="twitter-share-button"
+                                                                                   data-via="socketwiz">Tweet</a>
+            </p>
+        </div>;
     }
 }
+
+TwitterShare.propTypes = {
+    'posted': PropTypes.string
+};
