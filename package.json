@@ -1,7 +1,7 @@
 {
   "scripts": {
       "export": "next build && next export && touch out/.nojekyll",
-      "deploy: "git subtree push --prefix out origin gh-pages",
+      "deploy": "git subtree push --prefix out origin gh-pages",
       "dev": "next",
       "build": "next build",
       "start": "next start"
