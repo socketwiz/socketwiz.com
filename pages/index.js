@@ -9,6 +9,12 @@ export default class Index extends Component {
             <div id="home">
                 <ul className="posts">
                     
+                    <li data-date="2017-07-10">
+                        <Link href="/2017-07-10-from-vim-to-spacemacs-to-emacs">
+                            <a>From VIM to Spacemacs to Emacs</a>
+                        </Link>
+                    </li>
+
                     <li data-date="2014-08-03">
                         <Link href="/2014-08-03-using-dtrace-to-fix-git">
                             <a>Using dtrace to fix git</a>
