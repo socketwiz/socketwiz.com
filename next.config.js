@@ -8,6 +8,9 @@ module.exports = {
             '/about': {
                 'page': '/about'
             },
+            '/2017-07-10-from-vim-to-spacemacs-to-emacs.js': {
+                'page': '/2017-07-10-from-vim-to-spacemacs-to-emacs.js'
+            },
             '/2014-08-03-using-dtrace-to-fix-git.js': {
                 'page': '/2014-08-03-using-dtrace-to-fix-git.js'
             },
