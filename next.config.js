@@ -12,7 +12,7 @@ module.exports = {
                 'page': '/2017-07-10-from-vim-to-spacemacs-to-emacs.js'
             },
             '/2014-08-03-using-dtrace-to-fix-git': {
-                'page': '/2014-08-03-using-dtrace-to-fix-git'
+                'page': '/2014-08-03-using-dtrace-to-fix-git.js'
             },
             '/2014-07-04-github-for-blogging': {
                 'page': '/2014-07-04-github-for-blogging.js'
