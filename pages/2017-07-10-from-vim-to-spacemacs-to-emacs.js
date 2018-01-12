@@ -6,6 +6,8 @@ import TwitterShare from '../components/twitter-share.js';
 
 export default class Article extends Component {
     render() {
+        const emacsConfig = 'https://github.com/socketwiz/dotfiles/tree/master/emacs/.emacs.d';
+
         return <Main title="From VIM to Spacemacs to Emacs">
             <h2>From VIM to Spacemacs to Emacs</h2>
 
@@ -17,7 +19,7 @@ export default class Article extends Component {
                 on the lookout for something better.  I ran across an article on Quora asking about the best
                 editor for programming and my answer to that is generally a solid VIM.  However somebody
                 mentioned <a href="http://spacemacs.org/" target="_blank" rel="noopener noreferrer">Spacemacs</a> which
-                is simply Emacs configured for VIM users...at least that#39;s what it started off life as.
+                is simply Emacs configured for VIM users...at least that&#39;s what it started off life as.
                 It now seems to cater to Emacs users as well.  At any rate I had to give it a try
                 because I&#39;ve always wanted to like Emacs but never really could get into it.  There
                 are some areas where VIM is lacking and project management is one of those areas.
@@ -97,7 +99,7 @@ export default class Article extends Component {
                 really need a debugger for that in Emacs.  Even Node utilizes the Chrome dev tools these days so
                 I&#39;m all set there.  So if you&#39;re interested to see the configuration I&#39;ve come up with
                 for developing JavaScript you can find it
-                here: <a href="https://github.com/socketwiz/dotfiles/tree/master/emacs/.emacs.d" target="_blank" rel="noopener noreferrer">https://github.com/socketwiz/dotfiles/tree/master/emacs/.emacs.d</a>
+                here: <a href={emacsConfig} target="_blank" rel="noopener noreferrer">{emacsConfig}</a>
             </p>
 
             <Disqus />
