@@ -18,6 +18,15 @@ export default class Main extends Component {
                     </div>
                 </div>
 
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31544835-1"></script>
+                <script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'UA-31544835-1');
+                </script>
+
             <Footer />
         </div>;
     }
