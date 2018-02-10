@@ -2,8 +2,14 @@
 import {Component} from 'react';
 import Footer from '../components/footer.js';
 import Header from '../components/header.js';
+import ReactGA from 'react-ga';
 
 export default class Main extends Component {
+    componentDidMount() {
+        ReactGA.initialize('UA-31544835-1');
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+
     render() {
         const {children, title} = this.props;
 
@@ -17,15 +23,6 @@ export default class Main extends Component {
                         </div>
                     </div>
                 </div>
-
-                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-31544835-1"></script>
-                <script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', 'UA-31544835-1');
-                </script>
 
             <Footer />
         </div>;
