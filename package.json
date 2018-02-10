@@ -1,7 +1,8 @@
 {
     "scripts": {
         "export": "next build && next export && touch out/.nojekyll && cp CNAME out/",
-        "deploy": "git subtree push --prefix out origin gh-pages",
+        "deploy": "gh-pages -d build",
+        "predeploy": "npm run build",
         "dev": "next",
         "build": "next build",
         "start": "next start"
@@ -12,5 +13,8 @@
         "react": "16.2.0",
         "react-dom": "16.2.0",
         "react-ga": "^2.4.1"
+    },
+    "devDependencies": {
+        "gh-pages": "^1.1.0"
     }
 }
