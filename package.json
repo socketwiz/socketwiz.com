@@ -2,23 +2,24 @@
     "scripts": {
         "export": "next build && next export && touch out/.nojekyll && cp CNAME out/",
         "deploy": "gh-pages -d out",
+        "postupdates": "npm install",
         "predeploy": "npm run build",
         "dev": "next",
         "build": "next build",
         "start": "next start",
-        "update": "ncu -a"
+        "updates": "ncu -u"
     },
     "dependencies": {
-        "lodash": "4.17.11",
-        "next": "8.1.0",
+        "lodash": "4.17.14",
+        "next": "9.0.1",
         "prop-types": "15.7.2",
         "react": "16.8.6",
         "react-dom": "16.8.6",
-        "react-ga": "2.5.7"
+        "react-ga": "2.6.0"
     },
     "devDependencies": {
         "deep-extend": "0.6.0",
         "gh-pages": "2.0.1",
-        "npm-check-updates": "3.1.10"
+        "npm-check-updates": "3.1.18"
     }
 }
