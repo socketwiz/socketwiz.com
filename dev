@@ -18,11 +18,11 @@ then
     tmux split-window -h -p 50 -t socketwiz:0.0
 
     # run the server in the first pane, test in the second
-    tmux send-keys -t socketwiz:0.0 'cd ~/dev/socketwiz && npm run dev' C-m
+    tmux send-keys -t socketwiz:0.0 'cd ~/dev/javascript/socketwiz && npm run dev' C-m
     #tmux send-keys -t socketwiz:0.1 'cd ~/dev/socketwiz && yarn run test:watch' C-m
 
     # just get to the proper path in the last window
-    tmux send-keys -t socketwiz:1.0 'cd ~/dev/socketwiz' C-m
+    tmux send-keys -t socketwiz:1.0 'cd ~/dev/javascript/socketwiz' C-m
 
     # select the server window and pane
     tmux select-window -t socketwiz:0.0

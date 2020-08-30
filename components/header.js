@@ -12,9 +12,9 @@ export default class Header extends Component {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-                <link rel="stylesheet" href="/static/css/syntax.css" />
-                <link rel="stylesheet" href="/static/css/gist.css" />
-                <link rel="stylesheet" href="/static/css/main.css" />
+                <link rel="stylesheet" href="/css/syntax.css" />
+                <link rel="stylesheet" href="/css/gist.css" />
+                <link rel="stylesheet" href="/css/main.css" />
             </Head>
 
             <div className="navbar navbar-inverse navbar-fixed-top" role="navigation">

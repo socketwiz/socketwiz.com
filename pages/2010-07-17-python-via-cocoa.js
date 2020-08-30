@@ -25,7 +25,7 @@ export default class Article extends Component {
                 to Python and back again. This is very cool stuff. Here is a screen shot of my
                 little test app</p>
 
-            <p><img src="/static/images/rover.png" alt="Rover test app" /></p>
+            <p><img src="/images/rover.png" alt="Rover test app" /></p>
 
             <p>Here is the Cocoa script that I executed in it’s entirety:</p>
 

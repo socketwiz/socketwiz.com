@@ -15,7 +15,7 @@ export default class Article extends Component {
                 remap it to control and keep that pinky on the home row and save yourself some
                 carpal tunnel, hehe:
             </p>
-            <p><img src="/static/images/caps_lock.png" alt="Caps Lock" /></p>
+            <p><img src="/images/caps_lock.png" alt="Caps Lock" /></p>
 
             <Disqus />
         </Main>;

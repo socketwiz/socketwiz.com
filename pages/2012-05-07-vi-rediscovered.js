@@ -26,7 +26,7 @@ export default class Article extends Component {
             <p><em>Vim</em><br />
                 Over the weekend I was interested in learning more about a new technology called <a href="http://backbonejs.org/"> Backbone.js </a>.  So I ran across this <a href="http://backbonescreencasts.com/"> guy </a> and he was rockin Vim!  He stutters a little bit, but he really knows his stuff when it comes to Javascript and Backbone.js.  However I was really intrigued by his use of Vim.  I had no idea you could do some of those things.  I buy a lot of books from Pragmatic Bookshelf and in an email I had received was a <a href="http://pragprog.com/book/dnvim/practical-vim"> book </a> on Vim that I had not payed much attention to.  So I went and bought it and spent all weekend reading it and playing with Vim.  Holy cow is all I can say.  Who knew?  Its like an IDE inside of an editor these days.  It has plugins that extend it to do just about anything you could imagine.  So I spent the weekend grabbing a couple of plugins and configuring my .vimrc.  I didn’t go crazy, but here is what I ended up with:</p>
 
-            <p><img src="/static/images/vim_tmux.png" alt="Vim in Tmux" /></p>
+            <p><img src="/images/vim_tmux.png" alt="Vim in Tmux" /></p>
 
             <p><a href="https://github.com/tpope/vim-pathogen"> <em>Pathogen</em> </a>: This one is like the ring in Lord of the Rings, it rules all of the other addons.  You really need to install it first, it makes installing all of the other addons a piece of cake.  Once installed you simply create a directory under ~/.vim called bundle, then to install another addon its as simple as: git clone addon.git in that directory.</p>
 
