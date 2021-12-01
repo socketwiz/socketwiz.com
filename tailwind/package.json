@@ -1,0 +1,21 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_ENV=production tailwind -i ./src/tailwind.css -o ../static/css/styles.css --minify",
+    "build:dev": "tailwind -i ./src/tailwind.css -o ../static/css/styles.css",
+    "build:watch": "tailwind -i ./src/tailwind.css -o ../static/css/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.4",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^2.2.19"
+  }
+}
