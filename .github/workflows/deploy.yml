@@ -13,3 +13,4 @@ jobs:
         BUILD_DIR: .
         BUILD_FLAGS: --drafts
         TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        ZOLA_VERSION: "0.22.0"
