@@ -4,6 +4,8 @@ jobs:
   build:
     name: shalzz/zola-deploy-action
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - uses: actions/checkout@v4
     - name: shalzz/zola-deploy-action
@@ -11,5 +13,5 @@ jobs:
       env:
         PAGES_BRANCH: gh-pages
         BUILD_DIR: .
-        TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         ZOLA_VERSION: "0.22.0"
