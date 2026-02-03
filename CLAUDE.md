@@ -41,4 +41,4 @@ This is a static portfolio site using **Zola** (static site generator) with **Ta
 ### Conventions
 - Dark mode enabled by default (`dark` class on html element)
 - Tailwind responsive prefixes for mobile-first design
-- Font Awesome via CDN for icons
+
